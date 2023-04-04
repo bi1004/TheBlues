@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout"
+      layout:decorate="~{layouts/layout1}">
+<head>
+    <meta charset="UTF-8">
+    <title>My Fancy Template</title>
+    <link rel="stylesheet" th:href="@{https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css}">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Jua&display=swap" rel="stylesheet">
+
+    <style>
+        .navbar {
+            background-color: #e3f2fd; /* 헤더 배경색 */
+            width: 100%; /* 헤더 너비 */
+            height: 80px; /* 헤더 높이 */
+        }
+        .navbar-brand {
+            width: 20px;
+            height: 20px;
+        }
+        .nav-link {
+            color: white; /* 텍스트 색상 변경 */
+            font-size: 2rem; /* 폰트 크기 변경 */
+            font-family: 'Jua', sans-serif; /* 폰트 변경 */
+        }
+        .form-control {
+            width: 400px; /* 검색창 너비 변경 */
+            font-family: 'Jua', sans-serif; /* 폰트 변경 */
+        }
+        .navbar-brand img {
+            width: 10px;
+            height: auto;
+        }
+
+
+    </style>
+</head>
+
+<body>
+
+<div th:fragment="header">
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse"
+                data-target="#navbarTogglerDemo03" aria-controls="navbarTogglerDemo03"
+                aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <a class="navbar-brand" href="/">
+            <img src="https://img1.daumcdn.net/thumb/R1280x0/?scode=mtistory2&fname=https%3A%2F%2Fblog.kakaocdn.net%2Fdn%2Fbd07l0%2Fbtr6BfDo7O2%2FI60DDXf7F6MQKV2r3bviY1%2Fimg.png" alt="TheBlues 로고" width="150px" >
+        </a>
+
+
+
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo03">
+            <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
+                <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+                    <a class="nav-link" href="/admin/item/new">상품 등록</a>
+                </li>
+                <li class="nav-item" sec:authorize="hasAnyAuthority('ROLE_ADMIN')">
+                    <a class="nav-link" href="/admin/items">상품 관리</a>
+                </li>
+
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" href="/orders">구매 내역</a>
+                </li>
+                <li class="nav-item" sec:authorize="isAnonymous()">
+                    <a class="nav-link" href="/members/login">로그인</a>
+                </li>
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" href="/members/logout">로그아웃</a>
+                </li>
+                <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" href="/cart">장바구니</a>
+                </li>
+               <!-- <li class="nav-item" sec:authorize="isAuthenticated()">
+                    <a class="nav-link" href="/liked">찜하기</a>
+                </li>-->
+
+            </ul>
+            <form class="form-inline my-2 my-lg-0" th:action="@{/}" method="get">
+                <input name="searchQuery" class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit"> 검색하기
+                </button>
+            </form>
+        </div>
+    </nav>
+</div>
+</body>
+<style>
+    .navbar {
+        background-color: #008CBA; /* 헤더 배경색 */
+        width: 100%; /* 헤더 너비 */
+        height: 80px; /* 헤더 높이 */
+    }
+    .navbar-brand {
+        font-size: 30px; /* 브랜드 이름 크기 */
+        color: #fff; /* 브랜드 이름 색상 */
+    }
+    .nav-item {
+        margin-right: 10px; /* 메뉴 간격 */
+    }
+    .nav-link {
+        font-size: 20px; /* 메뉴 이름 크기 */
+        color: #fff; /* 메뉴 이름 색상 */
+    }
+    .form-control {
+        width: 300px; /* 검색창 너비 */
+        height: 40px; /* 검색창 높이 */
+    }
+    .btn-outline-success {
+        color: #fff; /* 버튼 텍스트 색상 */
+        border-color: #fff; /* 버튼 테두리 색상 */
+    }
+</style>
+</html>
