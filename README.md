@@ -2,7 +2,7 @@
 ![logo](https://user-images.githubusercontent.com/103248831/227715529-56fbd0de-5608-4bf3-a93b-96432fe604ea.jpg)
 ## ✨ 프로젝트 소개
  ⚽ 축구 용품을 판매하는 쇼핑몰 The Blues 더블루스 입니다! 💙 <br>
- ⚽ Epl 최고 팀인 첼시의 상품들을 모아 둔 쇼핑몰, 바로 TheBlues <br>
+ ⚽ 이 프로젝트는 Spring Boot와 Spring Data JPA를 사용하여 구현되었습니다. <br>
  ⚽ 더블루스는 첼시 팬들에게 첼시와 관련된 제품을 제공하기 위해 만들어졌습니다!  <br>
  
 
