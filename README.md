@@ -1,5 +1,6 @@
 # The Blues 축구 용품 쇼핑몰 ⚽
 ![logo](https://user-images.githubusercontent.com/103248831/227715529-56fbd0de-5608-4bf3-a93b-96432fe604ea.jpg)
+![메인](https://user-images.githubusercontent.com/103248831/230526079-82f9a7ad-17c2-49ae-a42e-0219e62f94cf.png)
 ## ✨ 프로젝트 소개
  ⚽ 축구 용품을 판매하는 쇼핑몰 The Blues 더블루스 입니다! 💙 <br>
  ⚽ 이 프로젝트는 Spring Boot와 Spring Data JPA를 사용하여 구현되었습니다. <br>
