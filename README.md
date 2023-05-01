@@ -1,4 +1,4 @@
-# The Blues 축구 용품 쇼핑몰 ⚽
+# 💙 The Blues 축구 용품 쇼핑몰 ⚽
 ![logo](https://user-images.githubusercontent.com/103248831/227715529-56fbd0de-5608-4bf3-a93b-96432fe604ea.jpg)
 ![메인](https://user-images.githubusercontent.com/103248831/230526079-82f9a7ad-17c2-49ae-a42e-0219e62f94cf.png)
 ## ✨ 프로젝트 소개
